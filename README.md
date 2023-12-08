@@ -4,7 +4,7 @@
 
 
 # Official links
-https://prxy-linkgen.vercel.app/index.html
+https://prxylinkgen.vercel.app/index.html
 
 
 
