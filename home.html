@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proxy Link Generator</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #282c35;
+            color: #fff;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        input[type="text"] {
+            padding: 10px;
+            margin: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #4caf50;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        #proxy-link {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+        }
+        #proxy-types-info {
+            color: #ccc;
+            margin-top: 10px;
+        }
+        #discord-invite {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #7289da;
+            color: #fff;
+            border: none;
+            text-decoration: none;
+        }
+        #github-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            text-decoration: none;
+        }
+    </style>
+
+    
+    <script>
+  
+        var predefinedLinks = {
+            interstellar: [
+                'https://learnmath.echarts.gr/',
+                'https://savor.cooking.youramys.com/',
+       'https://academy.organization.tomahawkchurch.org/',
+              'https://school-is-fun-for-kids.vercel.app/',
+              'https://interstellar-proxy-theta.vercel.app/',
+              'https://interstellar-2nz3.vercel.app/',
+              'https://a-nu-five.vercel.app/',
+              'https://interstellar-v9ou.vercel.app',
+              '',
+              '',
+              '',
+              '',
+              '',
+              '',
+              '',
+              '',
+              '',
+              '',
+              '',
+            ],
+            dogeunblocker: [
+                'https://tpoert.vercel.app/',
+                'https://mathematicsedu-f2qsobyl.b4a.run/app',
+                'https://shop-withus.vercel.app/app',
+                'https://vercel-deploy-six-hazel.vercel.app/app',
+          
+            ],
+            astroid: [
+                'https://quickmath.seabeg.com/',
+                'https://fractions.johngross.biz/ ',
+                'https://quickmath.seabeg.com/',
+                'https://learningalgebra101.tafca.co.uk/',
+                'https://education3.fr.to/',
+                'https://astroidsinspaceexploration.gurdit.com/',
+                'https://learningalgebra101.tafca.co.uk/',
+                'https://interactivemathwebsites.sitaci.com/',
+                'https://education5.fr.to/',
+                'https://education4.fr.to/',
+                'https://education3.fr.to/',
+                'https://education2.fr.to/',
+                'https://education.fr.to/',
+                'https://about-me.shekinahphotography.com/',
+                'https://ohio.rescuedivers.com.mx/',
+                'https://ohio.tomahawkchurch.org/',
+                'https://thankyoufortherole.shekinahphotography.com/',
+                'https://happyholidays.shekinahphotography.com/',
+                'https://bestdiscordserver.shekinahphotography.com/',
+                'https://theasteroid.shekinahphotography.com/',
+                'https://vypergroupbest.shekinahphotography.com/',
+                'https://breadmath.uk.to/',
+                'https://auxifygamedev.us.to',
+                'https://photography.abatek.com/',
+                'https://zelvinlosthisgum.shekinahphotography.com/',
+                'https://thomashehe.epicgamer.org',
+                'https://inbox.strangled.net/',
+                '',
+            
+            ]
+        };
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Proxy Link Generator</h1>
+        <input type="text" id="proxy-type" placeholder="Enter proxy type">
+        <div id="proxy-types-info">Only Interstellar, DogeUnblocker, and Astroid are available now.</div>
+        <button onclick="generateProxyLink()">Generate</button>
+        <div id="proxy-link"></div>
+        <a href="https://discord.gg/Mr2tzE98Wu" id="discord-invite">Join our Discord</a>
+        <a href="https://github.com/xpblocker" id="github-button" target="_blank">Developed BY xpblocker</a>
+    </div>
+
+    
+    <script>
+        function generateProxyLink() {
+            var proxyType = document.getElementById('proxy-type').value.toLowerCase();
+
+            
+            if (!isValidProxyType(proxyType)) {
+                alert('Error: Invalid proxy type. Please enter Interstellar, DogeUnblocker, or Astroid.');
+                return;
+            }
+
+            
+            if (predefinedLinks[proxyType].length === 0) {
+                alert('Error: No links available for ' + proxyType + '. Sorry :(');
+                return;
+            }
+
+            
+            var randomLink = predefinedLinks[proxyType][Math.floor(Math.random() * predefinedLinks[proxyType].length)];
+
+            
+            document.getElementById('proxy-link').innerHTML = 'Here is your proxy please dont leak the links: <a href="' + randomLink + '" target="_blank">' + randomLink + '</a>';
+        }
+
+        function isValidProxyType(type) {
+            
+            var validTypes = ['interstellar', 'dogeunblocker', 'astroid'];
+            return validTypes.includes(type);
+        }
+    </script>
+</body>
+</html>
